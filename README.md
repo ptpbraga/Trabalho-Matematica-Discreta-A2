@@ -56,7 +56,7 @@ Os dois ataques comparados no experimento 3:
 - **Refinamento de cores:** casa cada pessoa com o único vértice publicado que tem a mesma cor. É exato quando a base não tem ruído, mas basta alterar 0,1% das arestas para ele parar de funcionar.
 - **Propagação** (versão simplificada do ataque de Narayanan e Shmatikov, 2009): o atacante conhece umas 20 pessoas (as "sementes") e vai identificando as demais pelos vizinhos em comum, aceitando só os pares que se destacam. Tolera bem o ruído.
 
-Num teste com uma rede sintética de 4.000 vértices, a propagação ainda reidentificou cerca de 95% das pessoas com 20% das arestas alteradas, enquanto o coeficiente de agrupamento já tinha se distorcido em mais de 40%. Os números da rede ego-Facebook saem quando vocês rodarem `python src/experimentos.py`.
+Num teste com uma rede sintética de 4.000 vértices, a propagação ainda reidentificou cerca de 95% das pessoas com 20% das arestas alteradas, enquanto o coeficiente de agrupamento já tinha se distorcido em mais de 40%. Os números da rede ego-Facebook saem quando roda `python src/experimentos.py`.
 
 ## Referências do código
 
