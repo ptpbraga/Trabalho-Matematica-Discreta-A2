@@ -1,1 +1,0 @@
-# Trabalho-Matematica-Discreta-A2
