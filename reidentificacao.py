@@ -100,8 +100,13 @@ def ataque_propagacao(G, publicado, segredo, n_sementes=20, limiar=0.5, rng=rand
          estão ligados a w, dividido pela raiz do grau de w (para não
          favorecer quem tem muitos amigos).
       3. O par é aceito se w é o melhor candidato para v, v é o melhor
-         candidato para w, e o melhor se destaca do segundo
-         (excentricidade = (1º - 2º) / desvio padrão >= limiar).
+         candidato para w (nesse sentido a divisão é pela raiz do grau
+         de v), e o melhor se destaca do segundo:
+         excentricidade = (1º - 2º) / desvio >= limiar, em que 1º e 2º
+         são as duas maiores pontuações de v entre os vértices publicados
+         ainda livres e o desvio é o desvio-padrão populacional (divide
+         pelo número de termos) só das pontuações positivas de v. Se o
+         desvio é zero, o teste conta como satisfeito.
       4. Repete até não aparecerem pares novos.
 
     As pontuações são calculadas todas de uma vez com matrizes:
